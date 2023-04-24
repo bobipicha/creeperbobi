@@ -50,11 +50,7 @@ function ctrl_c() {
         exit 2
 }
 
-#Check depends
-if [ ! -f "/usr/bin/masscan" ]; then
-        echo -e "\e[38;5;29m\n\nmasscan\e[38;5;9m was not found at \e[38;5;29m/usr/bin/masscan\e[38;5;9m\nAdjust this script or download it from \e[38;5;29mhttps://github.com/robertdavidgraham/masscan/\e[38;5;9m\n\n\e[0m" 2>&1 | tee -a ./creeper-logs/creeper-logger-$logtime.log
-        exit 3
-fi
+#didnt work
 
 if [ ! -f "/usr/bin/python3" ]; then
         echo -e "\e[38;5;29m\n\npython3\e[38;5;9m was not found at \e[38;5;29m/usr/bin/python3\e[38;5;9m\nYou can install it with \e[38;5;29msudo apt install python3 python3-pip -y\e[38;5;9m\n\n\e[0m" 2>&1 | tee -a ./creeper-logs/creeper-logger-$logtime.log
